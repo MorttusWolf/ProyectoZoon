@@ -1,0 +1,529 @@
+.Registros {
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+
+.Registros.Aparecer {
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  visibility: visible;
+  position: fixed;
+  bottom: 2%;
+  left: 70%;
+  right: 2%;
+  top: 2%;
+}
+
+.MenuPrl {
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+
+.MenuPrl.Oscurecer {
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  background-color: darkgrey;
+}
+
+.Alert {
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+
+.Alert.Aparecer {
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  visibility: visible;
+  position: fixed;
+  bottom: 30%;
+  left: 30%;
+  right: 30%;
+  top: 30%;
+}
+
+.RegsHeaders {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.RegsHeaders h1 {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.RegsHeaders h1:hover {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+
+.RegsHeaders h1:active {
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  background-color: white;
+  color: white;
+}
+
+.RegsHeaders h1.Activar {
+  -webkit-transition: all 0.4 ease-out;
+  transition: all 0.4 ease-out;
+  background-color: black;
+  color: white;
+  border-color: white;
+}
+
+.RegsBody {
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+
+.RegsBody .RegbUsers {
+  height: 0%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  visibility: hidden;
+}
+
+.RegsBody .RegbUsers.Activar {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  height: 90%;
+  visibility: visible;
+}
+
+.RegsBody .RegbUsers .SelectClis {
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  color: black;
+}
+
+.RegsBody .RegbUsers .SelectClis.Activar {
+  color: lightblue;
+}
+
+.RegsBody .RegbUsers .SelectClis:hover {
+  color: lightblue;
+}
+
+.RegsBody .RegbUsers .SelectPros {
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  color: black;
+}
+
+.RegsBody .RegbUsers .SelectPros.Activar {
+  color: lightblue;
+}
+
+.RegsBody .RegbUsers .SelectPros:hover {
+  color: lightblue;
+}
+
+.RegsBody .RegbProducts {
+  height: 0%;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.RegsBody .RegbProducts.Activar {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  height: 90%;
+  visibility: visible;
+}
+
+.RegsBody .RegbUsers1 {
+  height: 0%;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.RegsBody .RegbUsers1.Activar {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  height: 90%;
+  visibility: visible;
+}
+
+.RegsBody .RegbUsers2 {
+  height: 0%;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.RegsBody .RegbUsers2.Activar {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  height: 90%;
+  visibility: visible;
+}
+
+* {
+  font-size: 16px;
+  overflow: hidden;
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 100%;
+  color: transparent;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+input, select, textarea {
+  border: 2px solid #a1a1a180;
+  border-radius: 4px;
+  margin: 8px;
+}
+
+button {
+  padding: 4px;
+  border: 2px solid #a1a1a180;
+  border-radius: 4px;
+}
+
+button:hover {
+  border-color: white;
+  background-color: rgba(44, 161, 211, 0.5);
+}
+
+.Registros {
+  visibility: hidden;
+  position: fixed;
+  bottom: 30%;
+  left: 200%;
+  right: 20%;
+  top: 30%;
+  margin: 0;
+  padding: 0;
+  border: 0px solid transparent;
+  gap: 0;
+  -ms-grid-rows: 100%;
+  -ms-grid-columns: 100%;
+      grid-template: 100% / 100%;
+  display: -ms-grid;
+  display: grid;
+  grid-template: 5% 95% / 100%;
+  grid-row-gap: 8px;
+  grid-column-gap: 8px;
+  grid-row-end: 8px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.Registros .RegsHeaders {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: 1/1/1/1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: wrap column;
+          flex-flow: wrap column;
+  border-radius: 4px;
+  -webkit-box-shadow: 2.66667px 8px 16px #363535;
+          box-shadow: 2.66667px 8px 16px #363535;
+  margin-left: 16px;
+  gap: 16px;
+  text-align: center;
+  padding: 8px;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  margin-right: 16px;
+}
+
+.Registros .RegsHeaders h1 {
+  gap: 16px;
+  text-align: center;
+  padding: 8px;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px;
+  border-radius: 8px;
+}
+
+.Registros .RegsBody {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  grid-area: 2/1/3/1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 60% 30% 10%;
+  -ms-grid-columns: 100%;
+      grid-template: 60% 30% 10% / 100%;
+  grid-column-gap: 16px;
+}
+
+.Registros .RegsBody .RegbUsers {
+  gap: 16px;
+  text-align: center;
+  padding: 8px;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  grid-area: 1/1/2/1;
+  border-radius: 4px;
+  -webkit-box-shadow: 2.66667px 8px 16px #363535;
+          box-shadow: 2.66667px 8px 16px #363535;
+  background-color: white;
+  margin: 32px 16px 8px 16px;
+}
+
+.Registros .RegsBody .RegbUsers:hover {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.Registros .RegsBody .RegbUsers .HeaderCli {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  width: 100%;
+  gap: 16px;
+  text-align: center;
+  padding: 8px;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Registros .RegsBody .RegbUsers1 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  grid-area: 2/1/3/1;
+  margin: 8px 16px 24px 16px;
+  border-radius: 4px;
+  -webkit-box-shadow: 2.66667px 8px 16px #363535;
+          box-shadow: 2.66667px 8px 16px #363535;
+  background-color: white;
+}
+
+.Registros .RegsBody .RegbUsers2 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  grid-area: 2/1/3/1;
+  margin: 8px 16px 24px 16px;
+  border-radius: 4px;
+  -webkit-box-shadow: 2.66667px 8px 16px #363535;
+          box-shadow: 2.66667px 8px 16px #363535;
+  background-color: white;
+}
+
+.Registros .RegsBody .RegbFooter {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  grid-area: 3/1/4/1;
+  margin: 8px 16px 32px 16px;
+  border-radius: 4px;
+  -webkit-box-shadow: 2.66667px 8px 16px #363535;
+          box-shadow: 2.66667px 8px 16px #363535;
+  background-color: white;
+}
+
+.Registros .RegsBody .RegbProducts {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: 1/1/3/1;
+  border-radius: 4px;
+  margin: 32px 16px;
+  -webkit-box-shadow: 2.66667px 8px 16px #363535;
+          box-shadow: 2.66667px 8px 16px #363535;
+  background-color: white;
+}
+
+.MenuPrl {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 10% 80% 10%;
+  -ms-grid-columns: (1fr)[11];
+      grid-template: 10% 80% 10%/repeat(11, 1fr);
+  grid-column-gap: 8px;
+  grid-row-gap: 4px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: 1/1/1/1;
+  width: 100%;
+  height: 100%;
+}
+
+.MenuPrl .Informe {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: -3;
+  grid-area: 1/4/3/1;
+}
+
+.MenuPrl .Lista {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 3;
+  grid-area: 2/4/3/7;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 100%;
+  -ms-grid-columns: (1fr)[3];
+      grid-template: 100%/repeat(3, 1fr);
+  grid-row-gap: 16px;
+}
+
+.MenuPrl .Lista .Imgs {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: 1/1/1/1;
+}
+
+.MenuPrl .Lista .Descriptions {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: 1/2/1/4;
+}
+
+.MenuPrl .Detalles {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 5;
+  grid-area: 2/7/3/12;
+}
+
+.MenuPrl .Botones {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 11;
+  grid-area: 3/1/4/12;
+}
+
+.MenuPrl .SesionExclavo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 4;
+  grid-area: 1/4/1/8;
+}
+
+.MenuPrl .SesionMaestro {
+  -ms-grid-row: 1;
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 4;
+  grid-area: 1/8/1/12;
+}
+
+.Alert {
+  visibility: hidden;
+  position: fixed;
+  bottom: 50%;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  background-color: white;
+  border-radius: 8px;
+  -webkit-box-shadow: 2.66667px 8px 16px #363535;
+          box-shadow: 2.66667px 8px 16px #363535;
+}
+
+.ListReg {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+  -ms-grid-columns: 33% 66%;
+      grid-template: auto / 33% 66%;
+}
+
+.ListReg p {
+  margin: 4px 2px;
+  border: 0px;
+  padding: 0px;
+  pad: 0px;
+}
+
+.ListReg input, .ListReg select, .ListReg textarea {
+  border: 2px solid #a1a1a180;
+  border-radius: 4px;
+  margin: 2px 1.33333px;
+}
+
+.ListReg .ContentLeft {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1/1/1/2;
+}
+
+.ListReg .ContentRigth {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1/2/1/3;
+}
+
+.CenterContent {
+  gap: 16px;
+  text-align: center;
+  padding: 8px;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+/*# sourceMappingURL=HojaDeEstilosZoom.css.map */

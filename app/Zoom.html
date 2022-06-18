@@ -1,0 +1,163 @@
+<?php 
+session_start();
+    require "./php/Security.php";
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/IniciarZoom.js"></script>
+    <script src="./js/ZoomApp_Funciones.js"></script>
+    <script src="./js/ZoomApp_Loaded.js"></script>
+    <script src="./js/ZoomApp_animaciones.js"></script>
+    <link rel="stylesheet" href="./../assets/Css/HojaDeEstilosZoom.css">
+    <title>Zoom</title>
+</head>
+<body>
+    <!--Script de  la app-->
+    <div>
+        <script type="text/javascript">
+        document.addEventListener(`DOMContentLoaded`, (ev)=>{
+        let CurrentUser = JSON.parse(localStorage.getItem("Sesion"))
+        texto.innerHTML=`Bienvenido Mr.${CurrentUser.user}`
+        })
+        </script>
+    </div>
+    <!--Menu principal-->
+    <section class="MenuPrl">
+        <div class="SesionExclavo">
+            <p>inicio de sesion exclavo</p>
+            <input type="button" value="Iniciar Usuario" id="LoginUser">
+        </div>
+        <div class="SesionMaestro">
+            <p id="texto"></p>
+            <a href="./php/logout.php">Cerrar Sesion</a>
+        </div>
+        <div class="Informe">
+            <p>Root</p>
+            <p>titulo</p>
+            <p>informes</p>
+        </div>
+        <div class="Lista">
+            <ol class="Imgs">
+                <li>Imagen1</li>
+                <li>Imagen2</li>
+            </ol>
+            <ol class="Descriptions">
+                <li>Descripcion1</li>
+                <li>Descripcion2</li>
+            </ol>
+        </div>
+        <div class="Detalles">
+            <p>Caja detallada</p>
+        </div>
+        <nav class="Botones">
+            <p>botones principales</p>
+            <button id="Register" class="boton1">Registrarse</button>
+        </nav>
+    </section>
+    <!--Caja de registros-->
+    <section id="Register" for="RegistrarUsuario" class="Registros">
+        <header class="RegsHeaders">
+            <h1 id="ProPage" class="ProP">Productos</h1>
+            <h1 id="UserPage" class="UserP">Usuario</h1>
+        </header>
+        <form class="RegsBody" action="./php/registrarElemento.php" method="POST">
+            <label for="Registros" class="TypeReg"></label>
+            <input name="TypeReg" id="TypeReg" value="default">
+            <div class="RegbUsers">
+                <div class="HeaderCli">
+                    <label for="Clientes" id="UserCli" class="SelectClis">Clientes</label>
+                    <label for="Proveedores" id="UserPro" class="SelectPros">Proveedores</label>
+                    <hr>
+                </div>
+                <p class="CenterContent">Datos Personales:</p>
+                <input type="text" name="RegNombre" placeholder="Primer nombre" id="RgtNombre" class="ContentRigth">
+                <input type="text" name="RegNombre2" id="RgtNombre2" placeholder="Segundo nombre">
+                <input type="text" name="RegApellido" id="RgtApellido" placeholder="Primer Apellido">
+                <input type="text" name="RegApellido2" id="RgtApellido2" placeholder="Segundo Apellido">
+                <div class="ListReg">
+                    <p>Nacimiento:</p>
+                    <input type="numbr" name="RegFechaNa" id="RgtFechaNa" placeholder="mm-dd-aa" maxlength="6">
+                    <p>Documento:</p>
+                    <div>
+                        <select name="CliTipoDocumento" id="CltTipoDocumento" value="1">
+                            <option value="1">CC</option>
+                            <option value="2">CE</option>
+                            <option value="3">TI</option>
+                        </select>
+                        <input placeholder="Digite su Documento" type="number" name="CliDocumento" id="CltDocumento">
+                    </div>
+                </div>
+                <input type="numbr" name="CliDocumentoC" id="CltDocumentoC" placeholder="Confirme el documento">
+                <p class="CenterContent">Datos de Contactos:</p>
+                <div class="ListReg">
+                    <select name="RegIndiceNum" id="RgtIndiceNum">
+                        <option value="57">+57 - Colombia</option>
+                    </select>
+                    <input type="numbr" name="RegNumero" placeholder="Número Celular" id="RgtNumero" maxlength="10">
+                    <select name="RegIndiceTel" id="RgtIndiceTel">
+                        <option value="601">+601 - Bogota D.C</option>
+                    </select>
+                    <input type="numbr" name="RegTelefono" id="RgtTelefono" placeholder="Número Telefónico" maxlength="7">
+                    <p>Correo:</p>
+                    <input type="text" name="RegCorreo" id="RgtCorreo" placeholder="Direccion de correo">
+                    <p>Dominio:</p>
+                    <input type="text" name="RegDominioCorreo" id="RgtDominioCorrego" placeholder="Dominio del correo">
+                </div>
+
+
+                <br>
+            </div>
+            <div class="RegbUsers1" id="RegClientes">
+                    <!--registro de clientes -->
+                    <label for="Cliente">Cliente</label> <hr>
+                    <div class="ListReg">
+                        <p>Custodiado: </p>
+                        <div>
+                            <p2>No</p2><input type="radio" name="CliCustodiado" id="CltCustodiado" value=false checked>
+                            <p2>Sí</p2><input type="radio" name="CliCustodiado" id="CltCustodiado" value=true ><br>
+                        </div><br>
+                        <p>Documento del guardian:</p>
+                        <select name="CliTipoDocumentoG" id="CltTipoDocumentoG" value="1">
+                            <option value=1>CC</option>
+                            <option value=2>CE</option>
+                        </select>
+                        <input placeholder="Digite el Documento" type="textbox" name="CliDocumentoG" id="CltDocumentoG">
+                    </div>
+                    <p>Relacion:</p>
+                    <textarea type="text" name="CliCusRelacion" id="CliCusRell" style="height: 40px; width: 80%;" placeholder="Relacion con el usuario"></textarea>
+            </div>
+            <div class="RegbUsers2" id="RegProveedores">
+                    <!--registro de proveedores -->
+                    <label for="Proveedor">Proveedor</label>
+                    <hr>
+                    <div class="ListReg">
+                        <p>Empresa:</p>
+                        <input placeholder="Digite su Marca" type="text" name="ProMarca" id="PvdMarca">
+                        <p>Sereal:</p>
+                        <input placeholder="Digite su Nit" type="number" name="ProNit" id="PvdNit">
+                    </div>
+            </div>
+            <label for="Producto">Producto</label>
+            <div class="RegbProducts">
+                <!-- registro para productos-->                 
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta quis eum delectus recusandae necessitatibus? Cupiditate soluta vero similique voluptate eum corporis, obcaecati fugiat atque quos excepturi nemo placeat quod consequuntur?</p>
+            </div>
+            <footer class="RegbFooter">
+                <button type="submit" value="Enviar">Enviar</button>
+                <button type="button" id="ComeBackRegisters" value="Volver">Volver</button>
+            </footer>
+        </form>
+    </section>
+    <!--Manejo de la BBDD-->
+    <section id="BBDDs" for="updatesBBDD" class="BBDD">
+    </section>
+    <!--Ventana de alertas-->
+    <section id="Alerts" for="DropAlert" class="Alert">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque fuga atque in voluptate, impedit accusamus non natus, voluptates inventore corporis sed neque consectetur cumque accusantium quod ut! Beatae, culpa nulla.</p>
+    </section>
+</body>
+</html>

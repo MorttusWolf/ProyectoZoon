@@ -1,0 +1,81 @@
+.Registros
+    transition: all 0.7s ease-in-out
+    &.Aparecer
+        transition: all 0.7s ease-in-out
+        @include Look_at()
+.MenuPrl
+    transition: all 0.7s ease-in-out
+    &.Oscurecer
+        transition: all 0.7s ease-in-out
+        background-color: darkgrey
+.Alert
+    transition: all 0.7s ease-in-out
+    &.Aparecer
+        transition: all 0.7s ease-in-out
+        @include Lookat_AlertBig()
+.RegsHeaders
+        transition: all 0.3s ease-in-out
+        h1
+            transition: all 0.3s ease-in-out
+            &:hover
+                transition: all 0.3s ease-in-out
+                background-color: black
+                color: white
+                border-color: black
+            &:active
+                transition: all 0.2s ease-out
+                background-color: white
+                color: white
+            &.Activar
+                transition: all 0.4 ease-out
+                background-color: black
+                color: white
+                border-color: white
+.RegsBody
+    transition: all 0.7s ease-in-out
+    .RegbUsers
+        height: 0%
+        transition: all 0.3s ease-in-out
+        visibility: hidden
+        &.Activar
+            transition: all 0.3s ease-in-out
+            height: 90%
+            visibility: visible
+        .SelectClis
+            transition: all 0.4s ease-out
+            color: black
+            &.Activar
+                color: lightblue
+            &:hover
+                color: lightblue
+        .SelectPros
+            transition: all 0.4s ease-out
+            color: black
+            &.Activar
+                color: lightblue
+            &:hover
+                color: lightblue
+    .RegbProducts
+        height: 0%
+        visibility: hidden
+        transition: all 0.3s ease-in-out
+        &.Activar
+            transition: all 0.3s ease-in-out
+            height: 90%
+            visibility: visible
+    .RegbUsers1
+        height: 0%
+        visibility: hidden
+        transition: all 0.3s ease-in-out
+        &.Activar
+            transition: all 0.3s ease-in-out
+            height: 90%
+            visibility: visible
+    .RegbUsers2
+        height: 0%
+        visibility: hidden
+        transition: all 0.3s ease-in-out
+        &.Activar
+            transition: all 0.3s ease-in-out
+            height: 90%
+            visibility: visible
