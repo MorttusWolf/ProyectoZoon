@@ -1,4 +1,4 @@
-class encryptZoom{
+class encryptZoon{
     constructor(type, text, code){
         this.tipo = type;
         this.texto = text.split("");

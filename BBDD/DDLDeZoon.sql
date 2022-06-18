@@ -1,7 +1,7 @@
 /*Crear base de datos con el lenguaje apropiado*/
-DROP DATABASE IF EXISTS Zoom;
-CREATE DATABASE Zoom CHARACTER SET utf8mb4 COLLATE utf8mb4_nopad_bin;
-Use Zoom;
+DROP DATABASE IF EXISTS Zoon;
+CREATE DATABASE Zoon CHARACTER SET utf8mb4 COLLATE utf8mb4_nopad_bin;
+Use Zoon;
 /*Definicion de la base de datos del proyecto en curso*/
 Create table Factorages(
     ID_Factorage varchar(18) not null PRIMARY KEY, 

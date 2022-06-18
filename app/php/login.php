@@ -14,7 +14,7 @@
 
             if(!($Services = $_SERVER["HTTP_HOST"])){
                 throw new Exception("Por favor inicie sesion desde direccion IP válida", 4);
-            }elseif (!($user = mysqli_connect($Services, $nombre, $contrasenia, "zoom"))) {
+            }elseif (!($user = mysqli_connect($Services, $nombre, $contrasenia, "Zoon"))) {
                 throw new Exception("Usuario no existente en la Red con ip $Services, intentelo de nuevo", 3);
             }
             else {
@@ -22,14 +22,14 @@
                 $response = mysqli_query(mysqli_connect("localhost", "root", "", "mysql"), "SELECT * FROM `user` WHERE user.User='$nombre' AND user.Host='$Services'");
                 $DataUser[1] = $response->fetch_assoc();
              ?>
-             <script src="../js/IniciarZoom.js"></script>
-             <script src="../js/ZoomApp_Funciones.js"></script>
-             <script src="../js/EncryptZoom.js"></script>
+             <script src="../js/IniciarZoon.js"></script>
+             <script src="../js/ZoonApp_Funciones.js"></script>
+             <script src="../js/EncryptZoon.js"></script>
              <script type="text/javascript">
                 document.addEventListener(`DOMContentLoaded`, (ev) =>{
                     let codigo =  "<?php echo $Services.$nombre ?>"
-                    let texto = new encryptZoom("encriptar", "<?php echo $contrasenia ?>", codigo)
-                    CargarZoom( "<?php echo $DataUser[0] ?>", "<?php echo $nombre ?>", [codigo, texto.result], 
+                    let texto = new encryptZoon("encriptar", "<?php echo $contrasenia ?>", codigo)
+                    CargarZoon( "<?php echo $DataUser[0] ?>", "<?php echo $nombre ?>", [codigo, texto.result], 
                     {<?php foreach ($DataUser[1] as $key => $value) {
                         echo $key.":"."'$value'".",";  
                     }?>});

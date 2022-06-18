@@ -28,7 +28,7 @@ session_start();
     }
     $RegDocumento[1] = $_POST['CliDocumento'];
     
-    $_SESSION['MasterConnect'] = mysqli_connect($_SESSION['MasterUserServices'], $_SESSION['MasterUserNickname'], $_SESSION['MasterUserPassword'], "zoom");
+    $_SESSION['MasterConnect'] = mysqli_connect($_SESSION['MasterUserServices'], $_SESSION['MasterUserNickname'], $_SESSION['MasterUserPassword'], "Zoon");
 
     mysqli_query($_SESSION['MasterConnect'],
      "INSERT INTO usuarios(Identificacion, _TipoIdentificacion, _FechaNacimiento, __actividad, _PrimerNombre, _OtrosNombres, _NombreDePila, _UltimoNombre)

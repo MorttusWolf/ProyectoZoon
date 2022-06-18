@@ -1,4 +1,4 @@
-class LoadZoom{
+class LoadZoon{
     constructor(){
         this.DoEventList()
         this.SetLedAtributes(innerHeight, innerWidth)
@@ -101,6 +101,6 @@ class LoadZoom{
     }
 }
 window.document.addEventListener(`DOMContentLoaded`, ()=>{
-    new LoadZoom()
+    new LoadZoon()
 }
 )

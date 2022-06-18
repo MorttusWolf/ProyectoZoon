@@ -1,4 +1,4 @@
-class IniciarZoom {
+class IniciarZoon {
     constructor(conexion, nombre, codificacion, detalles){
         this.user = nombre;
         this.conection = conexion;

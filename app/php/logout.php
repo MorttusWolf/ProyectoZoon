@@ -6,5 +6,5 @@ session_start();
     }else{
         echo 'none one set';
     }
-    header("Location: //$_SERVER[HTTP_HOST]/Zoom/index.html");
+    header("Location: //$_SERVER[HTTP_HOST]/Zoon/index.html");
 ?>
